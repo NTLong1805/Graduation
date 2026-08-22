@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lễ Tốt Nghiệp 2026 — Thiệp Mời</title>
+    <meta
+      name="description"
+      content="Trân trọng kính mời bạn đến tham dự buổi lễ tốt nghiệp."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- ============ OPENING SCREEN ============ -->
+    <div id="opening-screen" class="opening-screen">
+      <div class="opening-particles" id="openingParticles"></div>
+
+      <div class="opening-content">
+        <div class="opening-seal">
+          <svg viewBox="0 0 120 120" class="seal-svg">
+            <circle cx="60" cy="60" r="56" class="seal-ring" />
+            <circle cx="60" cy="60" r="46" class="seal-ring-inner" />
+            <g class="seal-cap" transform="translate(60,54)">
+              <path d="M0 -14 L28 -2 L0 10 L-28 -2 Z" class="seal-cap-top" />
+              <path
+                d="M-16 4 L-16 16 Q0 26 16 16 L16 4 L0 10 Z"
+                class="seal-cap-brim"
+              />
+              <line
+                x1="24"
+                y1="-2"
+                x2="24"
+                y2="18"
+                class="seal-tassel-string"
+              />
+              <circle cx="24" cy="20" r="3" class="seal-tassel-ball" />
+            </g>
+          </svg>
+        </div>
+
+        <p class="opening-eyebrow">You're Invited</p>
+        <h1 class="opening-title">My Graduation</h1>
+        <p class="opening-year">2026</p>
+
+        <p class="opening-quote">
+          "Một hành trình khép lại,<br />
+          một chặng đường mới bắt đầu."
+        </p>
+
+        <button id="openInviteBtn" class="btn btn-open">
+          <span>MỞ THIỆP</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ============ MAIN SITE ============ -->
+    <div id="main-site" class="main-site">
+      <!-- ============ NAVIGATION ============ -->
+      <nav id="navbar" class="navbar">
+        <div class="nav-container">
+          <a href="#hero" class="nav-logo"
+            ><i class="fa-solid fa-graduation-cap"></i
+          ></a>
+
+          <ul class="nav-links" id="navLinks">
+            <li>
+              <a href="#hero" class="nav-link active" data-section="hero"
+                >HOME</a
+              >
+            </li>
+            <li>
+              <a href="#invitation" class="nav-link" data-section="invitation"
+                >THE INVITATION</a
+              >
+            </li>
+            <li>
+              <a href="#event" class="nav-link" data-section="event">EVENT</a>
+            </li>
+            <li>
+              <a href="#journey" class="nav-link" data-section="journey"
+                >JOURNEY</a
+              >
+            </li>
+            <li>
+              <a href="#location" class="nav-link" data-section="location"
+                >LOCATION</a
+              >
+            </li>
+            <li>
+              <a href="#rsvp" class="nav-link" data-section="rsvp">RSVP</a>
+            </li>
+          </ul>
+
+          <button id="navToggle" class="nav-toggle" aria-label="Mở menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- ============ HERO ============ -->
+      <section id="hero" class="hero">
+        <div class="hero-decor hero-decor-left" aria-hidden="true">
+          <svg viewBox="0 0 200 400" class="branch-svg">
+            <use href="#olive-branch" />
+          </svg>
+        </div>
+        <div class="hero-decor hero-decor-right" aria-hidden="true">
+          <svg viewBox="0 0 200 400" class="branch-svg branch-flip">
+            <use href="#olive-branch" />
+          </svg>
+        </div>
+
+        <div class="container hero-container">
+          <div class="hero-text" data-reveal>
+            <p class="eyebrow">You're Invited</p>
+            <h1 class="hero-title">My Graduation</h1>
+            <p class="hero-year">2026</p>
+            <p class="hero-desc">
+              Trân trọng gửi lời mới tới bạn đến tham dự<br />
+              buổi lễ tốt nghiệp của tớ.
+            </p>
+
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                <i class="fa-regular fa-calendar"></i>
+                <span id="heroDate">07.09.2026</span>
+              </div>
+              <div class="hero-meta-divider"></div>
+              <div class="hero-meta-item">
+                <i class="fa-regular fa-clock"></i>
+                <span id="heroTime">04:00 PM</span>
+              </div>
+              <div class="hero-meta-divider"></div>
+              <div class="hero-meta-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="heroVenue">Đại học Giao Thông Vận Tải</span>
+              </div>
+            </div>
+
+            <div class="hero-cta">
+              <a href="#rsvp" class="btn btn-primary">XÁC NHẬN THAM DỰ</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" data-reveal>
+            <div class="hero-frame">
+              <svg viewBox="0 0 400 480" class="hero-illustration">
+                <use href="#grad-illustration" />
+              </svg>
+            </div>
+            <div class="hero-frame-ring"></div>
+          </div>
+        </div>
+
+        <a href="#invitation" class="scroll-cue" aria-label="Cuộn xuống">
+          <span></span>
+        </a>
+      </section>
+
+      <!-- ============ PERSONAL INVITATION ============ -->
+      <section id="invitation" class="invitation">
+        <div class="container">
+          <div class="letter" data-reveal>
+            <div class="letter-mark">
+              <i class="fa-solid fa-feather-pointed"></i>
+            </div>
+            <p class="eyebrow center">A Special Invitation</p>
+            <h2 class="section-title center">THÂN GỬI BẠN</h2>
+
+            <div class="letter-body" id="invitationMessage">
+              <p>
+                Sau những năm tháng học tập và trưởng thành, tớ đã chính thức
+                hoàn thành một hành trình rất đáng nhớ.
+              </p>
+              <p>
+                Đây là một cột mốc đặc biệt đối với tớ, và tớ rất mong bạn có
+                thể đến chung vui trong ngày quan trọng này.
+              </p>
+              <p>Sự có mặt của bạn sẽ khiến ngày hôm ấy trở nên ý nghĩa hơn.</p>
+            </div>
+
+            <div class="letter-signature">
+              <p class="signature-label">With love,</p>
+              <p class="signature-name" id="graduateName">Nguyễn Thành Long</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EVENT INFORMATION ============ -->
+      <section id="event" class="event">
+        <div class="container">
+          <p class="eyebrow center">Chi Tiết Buổi Lễ</p>
+          <h2 class="section-title center">EVENT INFORMATION</h2>
+
+          <div class="event-cards">
+            <div class="event-card" data-reveal>
+              <div class="event-card-icon">
+                <i class="fa-regular fa-calendar-days"></i>
+              </div>
+              <p class="event-card-label">THỜI GIAN</p>
+              <p class="event-card-main" id="eventDate">01.08.2026</p>
+              <p class="event-card-sub" id="eventDay">Thứ Bảy</p>
+              <p class="event-card-sub" id="eventTime">08:00 AM</p>
+            </div>
+
+            <div class="event-card" data-reveal>
+              <div class="event-card-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <p class="event-card-label">ĐỊA ĐIỂM</p>
+              <p class="event-card-main" id="eventVenue">Hội trường A</p>
+              <p class="event-card-sub" id="eventSchool">Đại học XYZ</p>
+              <p class="event-card-sub" id="eventCity">Hà Nội</p>
+            </div>
+
+            <div class="event-card" data-reveal>
+              <div class="event-card-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <p class="event-card-label">SỰ KIỆN</p>
+              <p class="event-card-main">Lễ tốt nghiệp</p>
+              <p class="event-card-sub" id="eventCohort">Khóa 2022–2026</p>
+            </div>
+          </div>
+
+          <!-- Countdown -->
+          <div class="countdown" data-reveal>
+            <p class="countdown-label">CÒN LẠI</p>
+            <div class="countdown-grid" id="countdown">
+              <div class="countdown-unit">
+                <span class="countdown-number" id="cd-days">00</span>
+                <span class="countdown-word">Days</span>
+              </div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-unit">
+                <span class="countdown-number" id="cd-hours">00</span>
+                <span class="countdown-word">Hours</span>
+              </div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-unit">
+                <span class="countdown-number" id="cd-minutes">00</span>
+                <span class="countdown-word">Minutes</span>
+              </div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-unit">
+                <span class="countdown-number" id="cd-seconds">00</span>
+                <span class="countdown-word">Seconds</span>
+              </div>
+            </div>
+            <p class="countdown-today" id="countdownToday" hidden>
+              TODAY IS THE DAY 🎓
+            </p>
+          </div>
+        </div>
+      </section>
+
+      
+      <!-- ============ LOCATION ============ -->
+      <section id="location" class="location">
+        <div class="container location-container">
+          <div class="location-text" data-reveal>
+            <p class="eyebrow">Where We Meet</p>
+            <h2 class="section-title">ĐỊA ĐIỂM TỔ CHỨC</h2>
+            <p class="location-venue" id="locationVenue">Hội trường</p>
+            <p class="location-address" id="locationAddress">
+              Đại học Giao Thông Vận Tải, Hà Nội
+            </p>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary"
+              id="mapsLink"
+            >
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>XEM TRÊN GOOGLE MAPS</span>
+            </a>
+          </div>
+          <div class="location-map" data-reveal>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3370.128405703289!2d105.80084557471436!3d21.02815948780023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab424a50fff9%3A0xbe3a7f3670c0a45f!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBHaWFvIFRow7RuZyBW4bqtbiBU4bqjaQ!5e1!3m2!1svi!2s!4v1787327238329!5m2!1svi!2s"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ RSVP FORM ============ -->
+      <section id="rsvp" class="rsvp">
+        <div class="container">
+          <div class="rsvp-inner">
+            <p class="eyebrow center">RSVP</p>
+            <h2 class="section-title center">BẠN SẼ ĐẾN CHỨ?</h2>
+            <p class="rsvp-subtitle">
+              Hãy cho mình biết bạn có thể đến chung vui trong ngày đặc biệt này
+              nhé ❤️
+            </p>
+
+            <form id="rsvpForm" class="rsvp-form" novalidate>
+              <div class="form-group">
+                <label for="name"
+                  >Họ và tên <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Nguyễn Văn B"
+                  autocomplete="name"
+                />
+                <span class="form-error" id="nameError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="ban@email.com"
+                  autocomplete="email"
+                />
+                <span class="form-error" id="emailError"></span>
+              </div>
+
+              <div class="form-group">
+                <label>Bạn sẽ tham dự? <span class="required">*</span></label>
+                <div class="radio-group">
+                  <label class="radio-option">
+                    <input type="radio" name="attendance" value="yes" />
+                    <span class="radio-custom"></span>
+                    <span>Mình sẽ đến 🎉</span>
+                  </label>
+                  <label class="radio-option">
+                    <input type="radio" name="attendance" value="no" />
+                    <span class="radio-custom"></span>
+                    <span>Rất tiếc, mình không thể đến</span>
+                  </label>
+                </div>
+                <span class="form-error" id="attendanceError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Lời nhắn</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Gửi lời chúc của bạn..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary btn-submit"
+                id="submitBtn"
+              >
+                <span class="btn-text">GỬI XÁC NHẬN</span>
+                <span class="btn-loading" hidden
+                  ><i class="fa-solid fa-spinner fa-spin"></i> ĐANG GỬI...</span
+                >
+              </button>
+
+              <p
+                class="form-status"
+                id="formStatus"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </form>
+
+            <!-- Thank you -->
+            <div class="thank-you" id="thankYou" hidden>
+              <div class="thank-you-icon">✨</div>
+              <h3 class="thank-you-title">CẢM ƠN BẠN!</h3>
+              <p class="thank-you-text">Mình đã nhận được phản hồi của bạn.</p>
+              <p class="thank-you-text">Hẹn gặp bạn tại buổi lễ ❤️</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FOOTER ============ -->
+      <footer class="footer">
+        <div class="container footer-container">
+          <div class="footer-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3 class="footer-title">LỄ TỐT NGHIỆP 2026</h3>
+          <p class="footer-text">Thank you for being part of my journey.</p>
+          <p class="footer-copy">
+            © 2026 <span id="footerName">Nguyễn Văn A</span>
+          </p>
+        </div>
+      </footer>
+    </div>
+    <!-- /#main-site -->
+
+    <!-- Confetti canvas -->
+    <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+    <!-- Shared SVG defs (illustrations reused via <use>) -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <g id="olive-branch">
+          <path
+            d="M100 20 C 60 80, 140 140, 100 380"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+          <ellipse
+            cx="80"
+            cy="70"
+            rx="10"
+            ry="22"
+            transform="rotate(-30 80 70)"
+            fill="currentColor"
+            opacity=".55"
+          />
+          <ellipse
+            cx="120"
+            cy="120"
+            rx="10"
+            ry="22"
+            transform="rotate(25 120 120)"
+            fill="currentColor"
+            opacity=".55"
+          />
+          <ellipse
+            cx="75"
+            cy="170"
+            rx="10"
+            ry="22"
+            transform="rotate(-30 75 170)"
+            fill="currentColor"
+            opacity=".55"
+          />
+          <ellipse
+            cx="122"
+            cy="220"
+            rx="10"
+            ry="22"
+            transform="rotate(25 122 220)"
+            fill="currentColor"
+            opacity=".55"
+          />
+          <ellipse
+            cx="78"
+            cy="270"
+            rx="10"
+            ry="22"
+            transform="rotate(-30 78 270)"
+            fill="currentColor"
+            opacity=".55"
+          />
+          <ellipse
+            cx="118"
+            cy="320"
+            rx="10"
+            ry="22"
+            transform="rotate(25 118 320)"
+            fill="currentColor"
+            opacity=".55"
+          />
+        </g>
+
+        <g id="grad-illustration">
+          <!-- decorative gold ring -->
+          <circle
+            cx="200"
+            cy="230"
+            r="150"
+            fill="none"
+            stroke="#D4AF37"
+            stroke-width="1"
+            opacity="0.35"
+          />
+          <!-- diploma scroll -->
+          <rect
+            x="120"
+            y="230"
+            width="160"
+            height="60"
+            rx="6"
+            fill="#F7F3E9"
+            stroke="#D4AF37"
+            stroke-width="2"
+          />
+          <circle
+            cx="120"
+            cy="260"
+            r="16"
+            fill="#F7F3E9"
+            stroke="#D4AF37"
+            stroke-width="2"
+          />
+          <circle
+            cx="280"
+            cy="260"
+            r="16"
+            fill="#F7F3E9"
+            stroke="#D4AF37"
+            stroke-width="2"
+          />
+          <line
+            x1="140"
+            y1="248"
+            x2="260"
+            y2="248"
+            stroke="#D4AF37"
+            stroke-width="1.5"
+            opacity=".6"
+          />
+          <line
+            x1="140"
+            y1="260"
+            x2="260"
+            y2="260"
+            stroke="#D4AF37"
+            stroke-width="1.5"
+            opacity=".6"
+          />
+          <line
+            x1="140"
+            y1="272"
+            x2="230"
+            y2="272"
+            stroke="#D4AF37"
+            stroke-width="1.5"
+            opacity=".6"
+          />
+          <!-- graduation cap -->
+          <g transform="translate(200,150)">
+            <path d="M0 -34 L74 -6 L0 22 L-74 -6 Z" fill="#0D1B2A" />
+            <path d="M-40 4 L-40 34 Q0 56 40 34 L40 4 L0 22 Z" fill="#1B263B" />
+            <circle cx="0" cy="-6" r="6" fill="#D4AF37" />
+            <line
+              x1="66"
+              y1="-6"
+              x2="66"
+              y2="40"
+              stroke="#D4AF37"
+              stroke-width="2"
+            />
+            <circle cx="66" cy="46" r="6" fill="#D4AF37" />
+          </g>
+          <!-- sparkles -->
+          <g fill="#D4AF37" opacity="0.8">
+            <path d="M320 90 l4 12 12 4 -12 4 -4 12 -4 -12 -12 -4 12 -4 z" />
+            <path d="M70 330 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3 z" />
+            <path d="M330 300 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 z" />
+          </g>
+        </g>
+      </defs>
+    </svg>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
