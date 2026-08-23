@@ -381,17 +381,82 @@ function initRsvpForm() {
     btnText.hidden = true;
     btnLoading.hidden = false;
 
+    try {
+
     const response = await fetch(
-    "https://graduation-j5q2gwygr-hello-world-3e9b.vercel.app/api/send-email",
-    {
-        method: "POST",
+        "https://graduation-j5q2gwygr-hello-world-3e9b.vercel.app/api/send-email",
+        {
+            method: "POST",
 
-        headers: {
-            "Content-Type": "application/json"
-        },
+            headers: {
+                "Content-Type": "application/json"
+            },
 
-        body: JSON.stringify(payload)
+            body: JSON.stringify(payload)
+        }
+    );
+
+
+    // Đọc response từ API
+    const result = await response.json();
+
+
+    // API trả lỗi
+    if (!response.ok) {
+
+        throw new Error(
+            result.error ||
+            "Không thể gửi email."
+        );
+
     }
+
+
+    // =========================
+    // GỬI THÀNH CÔNG
+    // =========================
+
+    console.log(
+        "Email sent successfully:",
+        result
+    );
+
+
+    submitBtn.disabled = false;
+
+    btnText.hidden = false;
+
+    btnLoading.hidden = true;
+
+
+    // Hiển thị màn hình cảm ơn
+    showThankYou();
+
+
+} catch (error) {
+
+    console.error(
+        "Email sending error:",
+        error
+    );
+
+
+    submitBtn.disabled = false;
+
+    btnText.hidden = false;
+
+    btnLoading.hidden = true;
+
+
+    formStatus.textContent =
+        error.message ||
+        "Không thể gửi email. Vui lòng thử lại.";
+
+    formStatus.classList.remove(
+        "success"
+    );
+
+}
 );
   });
 
