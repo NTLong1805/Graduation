@@ -27,7 +27,7 @@ const CONFIG = {
   // Optional separate embed URL for the iframe (leave null to derive one from fullAddress)
   googleMapsEmbedUrl: null,
 
-  contactEmail: "your-email@example.com",
+  contactEmail: "longprolc10@gmail.com",
 
   invitationMessage: [
     "Sau những năm tháng học tập và trưởng thành, mình đã chính thức hoàn thành một hành trình rất đáng nhớ.",
