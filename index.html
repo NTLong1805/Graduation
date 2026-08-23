@@ -356,15 +356,18 @@
                 <div class="radio-group">
                   <label class="radio-option">
                     <input type="radio" name="attendance" value="yes" />
-                    <span class="radio-custom"></span>
-                    <span>Mình sẽ đến 🎉</span>
+
+                    <span> Có, mình sẽ tham dự 🎉 </span>
                   </label>
+
                   <label class="radio-option">
                     <input type="radio" name="attendance" value="no" />
-                    <span class="radio-custom"></span>
-                    <span>Rất tiếc, mình không thể đến</span>
+
+                    <span> Rất tiếc, mình không thể tham dự </span>
                   </label>
                 </div>
+
+                <span class="form-error" id="attendanceError"> </span>
                 <span class="form-error" id="attendanceError"></span>
               </div>
 
@@ -584,5 +587,6 @@
     </svg>
 
     <script src="./script.js"></script>
+    <script src="./api/send-email.js"></script>
   </body>
 </html>

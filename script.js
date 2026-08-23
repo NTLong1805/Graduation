@@ -381,24 +381,18 @@ function initRsvpForm() {
     btnText.hidden = true;
     btnLoading.hidden = false;
 
-    try {
-      const response = await fetch("/api/send-email", {
+    const response = await fetch(
+    "https://graduation-j5q2gwygr-hello-world-3e9b.vercel.app/api/send-email",
+    {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
         body: JSON.stringify(payload)
-      });
-
-      if (!response.ok) throw new Error("Request failed");
-
-      showThankYou();
-    } catch (err) {
-      formStatus.textContent = "Không thể gửi thông tin. Vui lòng thử lại sau.";
-      formStatus.classList.remove("success");
-    } finally {
-      submitBtn.disabled = false;
-      btnText.hidden = false;
-      btnLoading.hidden = true;
     }
+);
   });
 
   function showThankYou() {
